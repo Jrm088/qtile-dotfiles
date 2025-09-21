@@ -21,4 +21,5 @@ sudo pacman -S --needed --noconfirm \
 	less \
 	man-db \
 	unzip \
-	tar
+	tar \
+	bat

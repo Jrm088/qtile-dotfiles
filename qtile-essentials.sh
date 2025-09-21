@@ -3,7 +3,6 @@
 # Terminal 
 sudo pacman -S --needed --noconfirm \
 	kitty \
-	xterm \
 	python-pywal \
 	starship
 
