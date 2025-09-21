@@ -1,27 +1,25 @@
 #!/bin/bash
 
-#--------------------------------
 # Terminal 
-#--------------------------------
-sudo pacman -S --needed kitty xterm python-pywall starship
+sudo pacman -S --needed --noconfirm \
+	kitty \
+	xterm \
+	python-pywal \
+	starship
 
-#--------------------------------
-# Fonts 
-#--------------------------------
-sudo pacman -S --needed ttf-jetbrains-mono-nerd ttf-dejavu ttf-font-awesome
+# Fonts
+sudo pacman -S --needed --noconfirm \
+	ttf-jetbrains-mono-nerd \
+	ttf-dejavu \
+	ttf-font-awesome
 
-#--------------------------------
 # Compositing / Notifications
-#--------------------------------
-sudo pacman -S --needed picom dunst rofi fastfetch
+sudo pacman -S --needed --noconfirm \
+	picom \
+	dunst \
+	rofi \
+	fastfetch
 
-#--------------------------------
-# File Manager 
-#--------------------------------
-sudo pacman -S --needed pcmanfm
-
-echo "Qtile essentials installed"
-
-
-
-
+# File Manager
+sudo pacman -S --needed --noconfirm \
+	pcmanfm
