@@ -1050,28 +1050,33 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- Better Tab completion for nvim-cmp
-local cmp_ok, cmp = pcall(require, 'cmp')
-if cmp_ok then
-  cmp.setup({
-    mapping = cmp.mapping.preset.insert({
-      -- Tab to accept completion
-      ['<Tab>'] = cmp.mapping(function(fallback)
+-- Fix Tab completion (safe version)
+vim.api.nvim_create_autocmd("User", {
+  pattern = "VeryLazy",
+  callback = function()
+    local cmp_ok, cmp = pcall(require, 'cmp')
+    if cmp_ok then
+      local current_config = cmp.get_config()
+      current_config.mapping['<Tab>'] = cmp.mapping(function(fallback)
         if cmp.visible() then
-          cmp.confirm({ select = true })
+          cmp.select_next_item()
         else
           fallback()
         end
-      end, { 'i', 's' }),
+      end, { 'i', 's' })
       
-      -- Ctrl+n/p to navigate
-      ['<C-n>'] = cmp.mapping.select_next_item(),
-      ['<C-p>'] = cmp.mapping.select_prev_item(),
+      current_config.mapping['<S-Tab>'] = cmp.mapping(function(fallback)
+        if cmp.visible() then
+          cmp.select_prev_item()
+        else
+          fallback()
+        end
+      end, { 'i', 's' })
       
-      -- Enter also works
-      ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    }),
-  })
-end
+      cmp.setup(current_config)
+    end
+  end,
+})
 
 -- Python keymaps
 vim.keymap.set('n', '<leader>r', '<cmd>w<CR><cmd>!python3 %<CR>', { desc = 'Run Python file' })
