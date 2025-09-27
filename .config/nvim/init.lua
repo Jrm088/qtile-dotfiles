@@ -1012,13 +1012,19 @@ require('lazy').setup({
   },
 })
 
--- Python Development Setup - Add this above the modeline comment
+-- Python Development Setup 
 
 -- Auto-install Python tools on startup
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     vim.defer_fn(function()
-      vim.cmd('MasonInstall pyright black isort')
+      local mason_registry = require("mason-registry")
+      local packages = { "pyright", "black", "isort" }
+      for _, package in ipairs(packages) do
+        if not mason_registry.is_installed(package) then
+          vim.cmd("MasonInstall " .. package)
+        end
+      end
     end, 1000)
   end,
 })
