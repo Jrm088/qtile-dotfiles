@@ -3,4 +3,6 @@
 
 //@theme "/usr/share/rofi/themes/Monokai.rasi"
 
-@theme "/usr/share/rofi/themes/material.rasi"
+//@theme "/usr/share/rofi/themes/material.rasi"
+
+@theme "/home/joe/dotfiles/.config/rofi/themes/material-custom.rasi"
