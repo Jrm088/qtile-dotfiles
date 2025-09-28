@@ -9,7 +9,7 @@
  */
 
 * {
-	base00: #000000;
+	base00: #282C3499;
 	base01: #000000;
 	base02: #0000FF;
 	base03: #546E7A;
@@ -25,8 +25,11 @@
 	base0D: #F2F3F2; 
 	base0E: #C792EA;
 	base0F: #FF5370;
+        
+        /* My defined colors */
 
-	/*base0D: #00BCD4;*/
+        lt-grey: #777; 
+        wht-one: #F2F3F2;
 
 	spacing: 0;
 	background-color: transparent;
@@ -35,15 +38,15 @@
 
 window {
 	transparency: "real";
-	background-color: #000000CC; /*base00 + CC (80% opacity)*/
+	background-color: @base00; /*base00 + CC (80% opacity)*/
 }
 
 mainbox {
 	children: [inputbar, message, mode-switcher, listview];
 	spacing: 30px;
 	padding: 30px 0;
-	border: 1px;
-	border-color: @base0D;
+	border: 3px;
+	border-color: @wht-one;
 }
 
 inputbar {
@@ -76,7 +79,7 @@ mode-switcher, message {
 }
 
 button, textbox {
-	background-color: @base03;
+	background-color: @lt-grey;
 	text-color: @base07;
 	padding: 5px;
 }
@@ -91,7 +94,7 @@ listview {
 }
 
 scrollbar {
-	background-color: @base03;
+	background-color: @lt-grey;
 	handle-color: @base0D;
 	handle-width: 10px;
 	border: 0 1px;

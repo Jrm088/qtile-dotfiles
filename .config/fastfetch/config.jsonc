@@ -5,8 +5,8 @@
   "logo": {
     "type": "auto",
     "color": {
-      "1": "blue",        // Primary color for Arch logo
-      "2": "cyan",        // Secondary color
+      "1": "#61AFEF",        // Primary color for Arch logo
+      "2": "#ABB2BF",        // Secondary color
       "3": "cyan"  // Additional color
     }
   },
@@ -15,8 +15,8 @@
   "display": {
     "separator": " -> ",
     "color": {
-      "keys": "blue",      // Color for labels (OS, CPU, etc.)
-      "title": "blue"  // Color for your username@hostname
+      "keys": "#C678DD",      // Color for labels (OS, CPU, etc.)
+      "title": "#61AFEF"  // Color for your username@hostname
     }
   },
   

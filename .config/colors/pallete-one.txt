@@ -1,0 +1,14 @@
+# One Dark colors for text and Greys
+
+blk-one: #282C34
+red-one: #E06C75
+grn-one: #98C379
+ylw-one: #E5C07B
+blu-one: #61AFEF
+purp-one: #C678DD
+lt-blue: #56B6C2
+gry-one: #ABB2BF
+
+lt-grey: #777
+wht-one: #F2F3F2
+gry-two: #848884
