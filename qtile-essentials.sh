@@ -21,4 +21,5 @@ sudo pacman -S --needed --noconfirm \
 
 # File Manager
 sudo pacman -S --needed --noconfirm \
-	pcmanfm
+	thunar \
+	arc-gtk-theme

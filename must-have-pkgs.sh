@@ -22,4 +22,5 @@ sudo pacman -S --needed --noconfirm \
 	man-db \
 	unzip \
 	tar \
-	bat
+	bat \
+	base-devel  
