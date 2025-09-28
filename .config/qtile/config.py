@@ -191,7 +191,8 @@ screens = [
                # widget.QuickExit(),
             ],
             24,
-            background="#111",
+            background="#282C34",
+            opacity=0.85,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
