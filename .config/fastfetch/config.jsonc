@@ -15,7 +15,7 @@
   "display": {
     "separator": " -> ",
     "color": {
-      "keys": "#C678DD",      // Color for labels (OS, CPU, etc.)
+      "keys": "#61AFEF",      // Color for labels (OS, CPU, etc.)
       "title": "#61AFEF"  // Color for your username@hostname
     }
   },

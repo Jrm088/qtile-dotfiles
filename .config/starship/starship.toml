@@ -1,25 +1,25 @@
 format = """
-$username [//](bold bright-white) $hostname [//](bold bright-white) $directory
+$username [//](bold #ABB2BF) $hostname [//](bold #ABB2BF) $directory
 $character
 """
 
 [username]
 show_always = true
-style_user = "bold blue"
+style_user = "#61AFEF"
 format = " [$user]($style)"
 
 [hostname]
 ssh_only = false
 style = "bold blue"
-format = "[ ](blue)"
+format = "[ ](#61AFEF)"
 
 
 [directory]
-style = "bold bright-white"
+style = "#F2F3F2"
 read_only = " 󰌾"
 truncate_to_repo = false
 truncation_length = 3
-format = "[](bold blue) [$path]($style) [$read_only]($style)"
+format = "[](#61AFEF) [$path]($style) [$read_only]($style)"
 
 [git_branch]
 symbol = " "
@@ -27,7 +27,7 @@ style = "bold purple"
 format = " [$symbol$branch]($style) "
 
 [character]
-success_symbol = "[❯](blue)"
+success_symbol = "[❯](#ABB2BF)"
 error_symbol = "[✗](red)"
 
 [aws]
