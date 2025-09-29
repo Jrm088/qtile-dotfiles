@@ -161,9 +161,9 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="sans",
-    fontsize=12,
-    padding=3,
+    font="JetBrains Mono Nerd Font",
+    fontsize=14,
+    padding=4,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -187,7 +187,11 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
+                widget.Sep(linewidth=1, padding=12, forground="#ffffff", background="#333"),
+                widget.BatteryIcon(),
+                widget.Battery(format="{percent:2.0%}", show_short_text=False),
+                widget.Sep(linewidth=1, padding=12, forground="#ffffff", background="#333"),
+                widget.Clock(format="%I:%M %p"),
                # widget.QuickExit(),
             ],
             24,
