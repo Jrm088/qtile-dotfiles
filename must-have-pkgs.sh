@@ -23,4 +23,5 @@ sudo pacman -S --needed --noconfirm \
 	unzip \
 	tar \
 	bat \
-	base-devel  
+	base-devel \
+        psutil	
