@@ -173,7 +173,7 @@ screens = [
         bottom=bar.Bar(
             [
                # widget.CurrentLayout(),
-                widget.GroupBox(font="JetBrains Mono Nerd Font"),
+                widget.GroupBox(font="JetBrains Mono Nerd Font", this_current_screen_border="#61afef",  hightlight_method="block", highlight_color="#c678dd", active="#ffffff"),
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Chord(
@@ -187,18 +187,19 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
-                widget.Volume(background="#89ca78"),
-                widget.CPU(format="CPU {load_percent}%", background="#f44747"),
-                #widget.Sep(linewidth=1, padding=12, forground="#ffffff", background="#2bbac5"),
-                widget.BatteryIcon(background="#2bbac5"),
-                widget.Battery(format="{percent:2.0%}",background="#2bbac5", show_short_text=False),
-                #widget.Sep(linewidth=1, padding=12, forground="#ffffff", background="#333"),
-                widget.Clock(format="%I:%M %p", background="#c678dd"),
+                widget.Volume(background="#282c34"),
+                widget.Sep(linewidth=1, padding=12, foreground="#61afef", background="#282c34"),
+                widget.CPU(format="CPU {load_percent}%", background="#282c34"),
+                widget.Sep(linewidth=2, padding=12, foreground="#61afef", background="#282c34"),
+                widget.BatteryIcon(background="#282c34"),
+                widget.Battery(format="{percent:2.0%}",background="#282c34", show_short_text=False),
+                widget.Sep(linewidth=1, padding=12, foreground="#61afef", background="#282c34"),
+                widget.Clock(format="%I:%M %p", background="#282c34"),
                # widget.QuickExit(),
             ],
             24,
             background="#282C34",
-            opacity=0.85,
+            opacity=0.75,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
