@@ -1,0 +1,12 @@
+# Set the theme for syntax highlighting
+--theme="OneDarkPro"
+
+# Always enable syntax highlighting (even when piping output)
+--color=always
+
+# Customize line numbers (optional)
+--line-numbers
+
+# Optional: Specify the number of lines to show before/after a match
+--wrap=always
+
